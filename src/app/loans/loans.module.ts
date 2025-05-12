@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CategoriesPageRoutingModule } from './categories-routing.module';
+import { LoansPageRoutingModule } from './loans-routing.module';
 
-import { CategoriesPage } from './categories.page';
+import { LoansPage } from './loans.page';
 
 @NgModule({
   imports: [
@@ -14,8 +14,8 @@ import { CategoriesPage } from './categories.page';
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    CategoriesPageRoutingModule
+    LoansPageRoutingModule
   ],
-  declarations: [CategoriesPage]
+  declarations: [LoansPage]
 })
-export class CategoriesPageModule {}
+export class LoansPageModule {}

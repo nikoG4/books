@@ -4,12 +4,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'tickets',
+    redirectTo: 'authors',
     pathMatch: 'full'
-  },
-  {
-    path: 'tickets',
-    loadChildren: () => import('./tickets/tickets.module').then( m => m.TicketsPageModule)
   },
   {
     path: 'books',
@@ -26,7 +22,11 @@ const routes: Routes = [
   {
     path: 'users',
     loadChildren: () => import('./users/users.module').then( m => m.UsersPageModule)
+  },  {
+    path: 'loans',
+    loadChildren: () => import('./loans/loans.module').then( m => m.LoansPageModule)
   }
+
 ];
 
 @NgModule({
