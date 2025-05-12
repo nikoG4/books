@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment';
 
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth())
   ],
   bootstrap: [AppComponent],
 })
