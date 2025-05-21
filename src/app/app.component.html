@@ -8,11 +8,12 @@
 
   <ng-container *ngIf="!isLoading && user; else loginView">
     <ion-split-pane contentId="main-content">
-      <ion-menu contentId="main-content" type="overlay">
+      <ion-menu contentId="main-content" type="overlay" >
         <ion-content>
           <ion-list id="inbox-list">
+            <img *ngIf="user.photoURL" [src]="user.photoURL" alt="Avatar" style="border-radius: 50%; width: 64px; height: 64px;">
             <ion-list-header>LibroTeca</ion-list-header>
-            <ion-note>{{ user.email }}</ion-note>
+            <ion-note>{{ user.displayName }}</ion-note>
 
             @for (p of appPages; track p; let i = $index) {
             <ion-menu-toggle auto-hide="false">
